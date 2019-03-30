@@ -1,0 +1,35 @@
+* git clone 问题
+#+BEGIN_QUOTE
+获取远程代码，问题展示
+
+提示错误信息 “ Disconnected: No supported authentication methods available(server sent: publickey) ”
+#+END_QUOTE
+
+#+BEGIN_SRC C
+
+#+END_SRC
+[[file:git clone err.png]]
+
+* 解决方案
+#+BEGIN_QUOTE
+1.首先查看公钥私钥是否生成\\
+2.Gitlab 添加本里公钥\\
+3.需要修改 TortoiseGit 网络的 SSH 客户端为 git 服务器的 ssh.exe
+#+END_QUOTE
+
+[[file:git ssh err.png]]
+
+#+BEGIN_SRC C
+ssh-keygen -t rsa -C "email@163.com"
+#+END_SRC
+
+#+BEGIN_SRC C
+git config --global user.name zenggong
+git config --global user.email email@163.com
+#+END_SRC
+* 参考网址
+1.用git从gitlab上面用ssh方式下载文件
+- 网址 https://blog.csdn.net/y13g14m/article/details/82661606
+2.git clone 报错
+- 网址 https://blog.csdn.net/Hello_World_QWP/article/details/82216345
+
