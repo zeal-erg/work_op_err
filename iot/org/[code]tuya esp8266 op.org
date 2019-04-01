@@ -1,0 +1,25 @@
+* 操作文档备注
+** 工具说明
+#+BEGIN_QUOTE
+1.目前使用跳线的方式，对应两块转换板\\
+2.TX、RX 对应连接方式为交叉方式
+3.准备烧录工具
+#+END_QUOTE
+** 编译固件说明 
+#+BEGIN_QUOTE
+1.切换到APP目录，执行编译脚本\\
+2.参数说明 sample_pk 项目名字; 1.0.0 版本号\\
+3.项目名称按照所需的名字，版本号未知\\
+4.生成的文件目录 esp8266/bin/upgrade/sample_pk/1.0.0\\
+5.生成四个文件，分别是 可供生产的两个固件，测试固件，upgrade 固件
+#+END_QUOTE
+*选择测试固件烧录*
+#+BEGIN_SRC C
+cd esp8266/app
+./build_app.sh sample_pk 1.0.0
+#+END_SRC
+** 烧录固件说明
+#+BEGIN_QUOTE
+1.测试固件的烧录地址为 0x1000 地址，其他的暂时默认官方
+#+END_SRC
+
