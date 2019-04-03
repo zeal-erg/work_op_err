@@ -23,3 +23,11 @@ cd esp8266/app
 1.测试固件的烧录地址为 0x1000 地址，其他的暂时默认官方
 #+END_SRC
 
+* debug 
+** new project
+#+BEGIN_SRC C
+cp -r esp_lts_1_switch oem_esp_lts_1_switch
+#+END_SRC
+** project flow process
+1.
+
